@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "name": "TwitchMultiVolume",
+  "version": "1.0",
+
+  "description": "Set Volume for each Streamer.",
+
+  "icons": {
+    "48": "icons/volumes-48.png"
+  },
+
+  "permissions": ["storage"],
+  "content_scripts": [
+    {
+      "matches": ["*://www.twitch.tv/*"],
+      "js": ["change_volumes.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  }
+}

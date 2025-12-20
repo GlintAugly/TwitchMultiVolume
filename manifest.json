@@ -1,6 +1,6 @@
 {
   "manifest_version": 2,
-  "name": "TwitchMultiVolume",
+  "name": "Twitch Multi Volume",
   "version": "1.0",
 
   "description": "Set Volume for each Streamer.",
@@ -10,6 +10,14 @@
   },
 
   "permissions": ["storage"],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "twitchmultivolume@glntaugly",
+      "data_collection_permissions": {
+        "required": ["websiteActivity", "websiteContent"]
+      }
+    }
+  },
   "content_scripts": [
     {
       "matches": ["*://www.twitch.tv/*"],
